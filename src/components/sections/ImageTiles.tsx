@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Reveal } from "../ui/Reveal";
 
+function getImageUrl(imageUrl: string) {
+  return imageUrl.startsWith("/")
+    ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`
+    : imageUrl;
+}
+
 export function ImageTiles({
   tiles,
 }: {
@@ -15,7 +21,7 @@ export function ImageTiles({
               className="absolute inset-0 bg-cover bg-center scale-[1.02] transition-transform duration-500 ease-out group-hover:scale-[1.08]"
               style={{
                 backgroundImage:
-                  `linear-gradient(180deg, rgba(10,18,14,.20), rgba(10,18,14,.62)), url(${t.imageUrl})`,
+                  `linear-gradient(180deg, rgba(10,18,14,.20), rgba(10,18,14,.62)), url(${getImageUrl(t.imageUrl)})`,
               }}
             />
             <div className="absolute inset-0 p-5 flex flex-col justify-end gap-2 text-white">

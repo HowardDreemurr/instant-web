@@ -15,13 +15,17 @@ export function StoryBand({
   imageUrl: string;
   id?: string;
 }) {
+  const fullImageUrl = imageUrl.startsWith("/")
+    ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`
+    : imageUrl;
+
   return (
     <section
       id={id}
       className="py-[88px] bg-cover bg-center"
       style={{
         backgroundImage:
-          `linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.38)), url(${imageUrl})`,
+          `linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.38)), url(${fullImageUrl})`,
       }}
     >
       <Container>

@@ -21,12 +21,14 @@ const HOME = {
 };
 
 export function JgiHero() {
+  const heroImage = `${import.meta.env.BASE_URL}images/hero.svg`;
+
   return (
     <header
       className="pt-28 pb-20 bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.45)), url(/images/hero.svg)",
+          `linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.45)), url(${heroImage})`,
       }}
     >
       <Container>
