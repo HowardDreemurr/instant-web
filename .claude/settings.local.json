@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:janegoodall.org)",
+      "Bash(powershell -Command \"Add-Type -AssemblyName System.IO.Compression.FileSystem; $zip = [System.IO.Compression.ZipFile]::OpenRead\\(''instant_spec.docx''\\); $entry = $zip.Entries | Where-Object { $_Name -eq ''document.xml'' }; $stream = $entry.Open\\(\\); $reader = New-Object System.IO.StreamReader\\($stream\\); $content = $reader.ReadToEnd\\(\\); $reader.Close\\(\\); $stream.Close\\(\\); $zip.Dispose\\(\\); $content\")",
+      "Bash(pip install:*)",
+      "Bash(python -c:*)",
+      "Bash(python -m pip install:*)",
+      "Bash(npm run build:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
