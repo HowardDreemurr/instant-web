@@ -6,7 +6,7 @@ export function VerticalTabs({ tabs }: { tabs: { title: string; body: string }[]
   const current = tabs[active] ?? tabs[0];
 
   return (
-    <div className="mt-5 grid gap-4 lg:grid-cols-[320px_1fr]">
+    <div className="mt-5 grid gap-4 lg:grid-cols-[320px_1fr] items-start">
       <Reveal>
         <div className="flex flex-col gap-2" role="tablist" aria-label="tabs">
           {tabs.map((t, i) => (

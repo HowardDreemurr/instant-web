@@ -21,14 +21,14 @@ const HOME = {
 };
 
 export function JgiHero() {
-  const heroImage = `${import.meta.env.BASE_URL}images/hero.svg`;
+  const heroImage = `${import.meta.env.BASE_URL}images/spec-hero.png`;
 
   return (
     <header
       className="pt-28 pb-20 bg-cover bg-center"
       style={{
         backgroundImage:
-          `linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.45)), url(${heroImage})`,
+          `linear-gradient(180deg, rgba(10,18,14,.88), rgba(10,18,14,.65)), url(${heroImage})`,
       }}
     >
       <Container>
@@ -72,8 +72,8 @@ export function JgiHero() {
               <div className="flex flex-col gap-3">
                 {HOME.quickFacts.map((q) => (
                   <div key={q.title}>
-                    <div className="font-extrabold text-white/92 tracking-[-0.01em]">{q.title}</div>
-                    <div className="mt-1 text-white/78 text-[13px] leading-[1.65]">{q.text}</div>
+                    <div className="font-extrabold text-white tracking-[-0.01em]">{q.title}</div>
+                    <div className="mt-1 text-white/90 text-[13px] leading-[1.65]">{q.text}</div>
                   </div>
                 ))}
               </div>

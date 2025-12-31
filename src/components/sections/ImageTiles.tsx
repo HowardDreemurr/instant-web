@@ -21,14 +21,16 @@ export function ImageTiles({
               className="absolute inset-0 bg-cover bg-center scale-[1.02] transition-transform duration-500 ease-out group-hover:scale-[1.08]"
               style={{
                 backgroundImage:
-                  `linear-gradient(180deg, rgba(10,18,14,.20), rgba(10,18,14,.62)), url(${getImageUrl(t.imageUrl)})`,
+                  `linear-gradient(180deg, rgba(10,18,14,.55), rgba(10,18,14,.80)), url(${getImageUrl(t.imageUrl)})`,
               }}
             />
-            <div className="absolute inset-0 p-5 flex flex-col justify-end gap-2 text-white">
-              <div className="text-xs font-extrabold tracking-[.14em] uppercase text-white/90">Learn more</div>
-              <div className="font-serif text-[34px] leading-[1] tracking-[-0.01em]">{t.title}</div>
-              <div className="text-white/85 leading-[1.65] text-sm max-w-[44ch]">{t.subtitle}</div>
-              <div className="mt-1 inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/25 bg-white/10">
+            <div className="absolute inset-0 p-5 pt-8 flex flex-col justify-between text-white">
+              <div className="flex flex-col gap-2">
+                <div className="text-xs font-extrabold tracking-[.14em] uppercase text-white/90">Learn more</div>
+                <div className="font-serif text-[34px] leading-[1] tracking-[-0.01em]">{t.title}</div>
+                <div className="text-white/85 leading-[1.65] text-sm max-w-[44ch]">{t.subtitle}</div>
+              </div>
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/25 bg-white/10">
                 →
               </div>
             </div>

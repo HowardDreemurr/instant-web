@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Container } from "../ui/Container";
 import { Reveal } from "../ui/Reveal";
+import { SECTION_COLORS } from "../../config/theme";
 
 export function StoryBand({
   kicker,
@@ -8,24 +9,32 @@ export function StoryBand({
   children,
   imageUrl,
   id,
+  colorIndex = 0,
 }: {
   kicker: string;
   title: string;
   children: ReactNode;
-  imageUrl: string;
+  imageUrl?: string;
   id?: string;
+  colorIndex?: number;
 }) {
-  const fullImageUrl = imageUrl.startsWith("/")
-    ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`
-    : imageUrl;
+  const fullImageUrl = imageUrl
+    ? imageUrl.startsWith("/")
+      ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`
+      : imageUrl
+    : null;
+
+  const bgColor = SECTION_COLORS[colorIndex % SECTION_COLORS.length];
 
   return (
     <section
       id={id}
       className="py-[88px] bg-cover bg-center"
       style={{
-        backgroundImage:
-          `linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.38)), url(${fullImageUrl})`,
+        backgroundImage: fullImageUrl
+          ? `linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.38)), url(${fullImageUrl})`
+          : undefined,
+        backgroundColor: fullImageUrl ? undefined : bgColor,
       }}
     >
       <Container>

@@ -9,6 +9,51 @@ export function HomePage() {
     <>
       <JgiHero />
 
+      {/* EU Project Information */}
+      <section className="py-10 bg-white border-b border-black/10">
+        <Container>
+          <Reveal>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="flex-1">
+                <div className="text-xs font-extrabold tracking-[.14em] uppercase text-black/50 mb-2">
+                  Horizon Europe MSCA Staff Exchanges
+                </div>
+                <h2 className="font-serif text-[clamp(20px,2vw,28px)] tracking-[-0.01em] m-0 text-forest2 leading-[1.2] mb-3">
+                  Intelligent and Sustainable IoT Networks for Accurate and Real-Time Large-Scale Landslide Monitoring and Prediction
+                </h2>
+                <a
+                  href="https://cordis.europa.eu/project/id/101236387"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline"
+                >
+                  View on EU CORDIS
+                  <span className="text-xs">↗</span>
+                </a>
+              </div>
+              <div className="flex-shrink-0 grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+                <div>
+                  <div className="text-black/50 text-xs font-semibold uppercase tracking-wide">Grant Agreement ID</div>
+                  <div className="font-bold text-forest2">101236387</div>
+                </div>
+                <div>
+                  <div className="text-black/50 text-xs font-semibold uppercase tracking-wide">EU Contribution</div>
+                  <div className="font-bold text-forest2">€1,187,370</div>
+                </div>
+                <div>
+                  <div className="text-black/50 text-xs font-semibold uppercase tracking-wide">Duration</div>
+                  <div className="font-bold text-forest2">Jan 2026 – Dec 2029</div>
+                </div>
+                <div>
+                  <div className="text-black/50 text-xs font-semibold uppercase tracking-wide">Coordinator</div>
+                  <div className="font-bold text-forest2">University of Exeter</div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
       <section className="py-16 pb-7 bg-bg">
         <Container>
           <Reveal>
@@ -26,19 +71,19 @@ export function HomePage() {
                 title: "Our Work",
                 subtitle: "The challenges we're addressing and our innovative approach",
                 to: "/our-work",
-                imageUrl: "/images/technology.svg",
+                imageUrl: "/images/our-work-bg.jpeg",
               },
               {
                 title: "Our Impact",
                 subtitle: "Research objectives and work packages driving innovation",
                 to: "/our-impact",
-                imageUrl: "/images/objectives.svg",
+                imageUrl: "/images/our-impact-bg.jpeg",
               },
               {
                 title: "Consortium",
                 subtitle: "Our multidisciplinary global partnership",
                 to: "/consortium",
-                imageUrl: "/images/workpackages.svg",
+                imageUrl: "/images/consortium-bg.jpeg",
               },
             ]}
           />
@@ -48,7 +93,7 @@ export function HomePage() {
       <StoryBand
         kicker="The problem"
         title="Landslides: A Growing Global Threat"
-        imageUrl="/images/challenges.svg"
+        colorIndex={0}
       >
         <div className="grid gap-6 md:grid-cols-3 mb-6">
           <div className="text-center">
@@ -75,7 +120,7 @@ export function HomePage() {
       <StoryBand
         kicker="Our solution"
         title="An Integrated IoT, AI, and 5G/6G Approach"
-        imageUrl="/images/technology.svg"
+        colorIndex={1}
       >
         <p className="m-0 mb-6">
           INSTANT leverages recent breakthroughs in Internet-of-Things (IoT), 5G/6G communications, and Artificial Intelligence/Machine Learning (AI/ML) to create an intelligent network system that can:
@@ -102,7 +147,7 @@ export function HomePage() {
       <StoryBand
         kicker="Global impact"
         title="Contributing to Climate Action and Resilience"
-        imageUrl="/images/objectives.svg"
+        colorIndex={0}
       >
         <p className="m-0 mb-6">
           By developing innovative technologies for monitoring and predicting landslide disasters amplified by climate change, INSTANT directly contributes to:

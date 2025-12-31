@@ -9,7 +9,20 @@
       "Bash(npm run build:*)",
       "Bash(python3:*)",
       "WebFetch(domain:howarddreemurr.github.io)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "WebFetch(domain:www.weblyzard.com)",
+      "WebFetch(domain:cordis.europa.eu)",
+      "WebFetch(domain:www.it.pt)",
+      "WebFetch(domain:geostud.ro)",
+      "WebFetch(domain:treetk.com)",
+      "WebFetch(domain:rinicom.com)",
+      "WebFetch(domain:www.upc.edu.cn)",
+      "WebFetch(domain:www.ahu.edu.cn)",
+      "WebFetch(domain:www.exeter.ac.uk)",
+      "WebFetch(domain:www.oulu.fi)",
+      "WebFetch(domain:en.cug.edu.cn)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)"
     ]
   }
 }

@@ -1,3 +1,5 @@
+import { colors } from "./src/config/theme.ts";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
@@ -8,12 +10,12 @@ export default {
         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial"],
       },
       colors: {
-        bg: "#f7f7f7",
-        text: "#222222",
-        forest: "#0066cc",
-        forest2: "#004494",
-        accent: "#00a8e8",
-        secondary: "#ff6b35",
+        bg: colors.bg,
+        text: colors.text,
+        forest: colors.forest,
+        forest2: colors.forest2,
+        accent: colors.accent,
+        secondary: colors.secondary,
       },
       boxShadow: {
         soft: "0 18px 54px rgba(0,0,0,.08)",

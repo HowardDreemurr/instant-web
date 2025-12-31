@@ -38,6 +38,45 @@ const BOTTLENECKS: { title: string; text: string }[] = [
   },
 ];
 
+const WORK_PACKAGES: { wp: string; title: string; aim: string; novelty: string }[] = [
+  {
+    wp: "WP1",
+    title: "Project Management, Coordination, and Communication",
+    aim: "Ensure effective coordination, communication, and management of the project across all partners to deliver high-quality outcomes on time and within budget.",
+    novelty: "1) Agile project management methodology\n2) Cross-institutional collaboration framework\n3) Stakeholder engagement and dissemination strategy",
+  },
+  {
+    wp: "WP2",
+    title: "Requirement Analysis and System Architecture Design",
+    aim: "Conduct comprehensive analysis of typical landslide scenarios and design an integrated architecture to sustainably acquire, transmit and analyze real-time sensor data for accurate landslide prediction.",
+    novelty: "1) Comprehensively investigate major types of landslides using novel sensor measurements\n2) Design an intelligent computing and networking architecture to deliver landslide prediction",
+  },
+  {
+    wp: "WP3",
+    title: "Optimized RIS for Simultaneous Wireless Power and Information Transfer",
+    aim: "Optimize RIS designs for sustainable IoT sensor energy supply and robust wireless communication across large-scale landslide-prone regions (to achieve RO1).",
+    novelty: "1) Optimization methodology for active RIS to achieve ideal SWIPT\n2) Efficient and real-time CSI acquisition technology\n3) Innovative RIS-SWIPT testbed for comprehensive evaluation of QoS",
+  },
+  {
+    wp: "WP4",
+    title: "Intelligent and Ultra-Low Latency IoT Networking Technologies",
+    aim: "Deliver novel designs of an intelligent and ultra-low latency IoT network to securely transmit real-time measurements acquired by large-scale heterogeneous sensors covering extensive landslide areas (to achieve RO2).",
+    novelty: "1) Innovative and intelligent IoT network architecture\n2) Integrated computing and networking framework\n3) Lightweight and interpretable AI-based IoT abnormality mitigation technologies",
+  },
+  {
+    wp: "WP5",
+    title: "Knowledge-guided and Explainable AI/ML Approach",
+    aim: "Create reliable, knowledge-guided, and explainable AI/ML models to accurately predict landslides by integrating real-time sensor measurements, remote sensing data, and environmental information (to achieve RO3).",
+    novelty: "1) High-performance knowledge-guided transformer model\n2) Adversarial and transfer learning method to enhance robustness\n3) Integration of Grad-CAM, SHAP and causal reasoning to understand decision chains",
+  },
+  {
+    wp: "WP6",
+    title: "System Integration, Experiments, Demonstration and Evaluation",
+    aim: "Integrate individual R&I outcomes into an experiment system and perform comprehensive simulated and real-world experiments for performance evaluation, refinement, and demonstration (to achieve RO4).",
+    novelty: "1) Test platform for testing the integrated system\n2) Comprehensive performance and reliability tests of the novel prediction system\n3) Real-world demonstrations to catalyze innovations in broader environmental monitoring",
+  },
+];
+
 export function OurWorkPage() {
   return (
     <>
@@ -49,10 +88,37 @@ export function OurWorkPage() {
         <p className="m-0">{INTRO}</p>
       </StoryBand>
 
+      {/* Work Packages - Main Section */}
+      <StoryBand kicker="Work Packages" title="WP1–WP6: Our Programme Structure" colorIndex={0}>
+        <p className="m-0 mb-6 text-white/80">
+          INSTANT is organized into six integrated work packages, each targeting specific challenges in landslide monitoring and prediction.
+        </p>
+        <div className="grid grid-cols-12 gap-3">
+          {WORK_PACKAGES.map((wp, idx) => (
+            <Reveal key={wp.wp} delayMs={idx * 60} className="col-span-12 md:col-span-6">
+              <div className="border border-white/20 bg-white/10 rounded-2xl overflow-hidden h-full">
+                <div className="p-4 border-b border-white/15 bg-white/5">
+                  <div className="inline-flex px-3 py-1.5 rounded-full border border-white/25 bg-white/10 font-extrabold text-xs tracking-[.14em] uppercase text-white/90">
+                    {wp.wp}
+                  </div>
+                  <div className="mt-3 font-extrabold text-white/95 tracking-[-0.01em]">{wp.title}</div>
+                </div>
+                <div className="p-4">
+                  <div className="text-xs font-extrabold tracking-[.14em] uppercase text-white/90">Aim</div>
+                  <div className="mt-2 text-white/80 text-[13px] leading-[1.75] whitespace-pre-wrap">{wp.aim}</div>
+                  <div className="mt-4 text-xs font-extrabold tracking-[.14em] uppercase text-white/90">Novelty</div>
+                  <div className="mt-2 text-white/80 text-[13px] leading-[1.75] whitespace-pre-wrap">{wp.novelty}</div>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </StoryBand>
+
       <StoryBand
         kicker="Existing technology"
         title="What exists today — and the limitations for real‑time monitoring"
-        imageUrl="/images/hero.svg"
+        colorIndex={1}
       >
         <p className="m-0">{EXISTING_TECH_INTRO}</p>
         <VerticalTabs
@@ -76,7 +142,7 @@ export function OurWorkPage() {
       <StoryBand
         kicker="Challenges"
         title="Three core challenges that inhibit real‑time large‑scale deployment"
-        imageUrl="/images/challenges.svg"
+        colorIndex={0}
       >
         <VerticalTabs
           tabs={[
@@ -96,7 +162,7 @@ export function OurWorkPage() {
         />
       </StoryBand>
 
-      <StoryBand kicker="Bottlenecks" title="What we aim to overcome" imageUrl="/images/workpackages.svg">
+      <StoryBand kicker="Bottlenecks" title="What we aim to overcome" colorIndex={1}>
         <CardGrid items={BOTTLENECKS} />
       </StoryBand>
 
@@ -108,7 +174,7 @@ export function OurWorkPage() {
               See how we measure success
             </h2>
             <p className="max-w-[80ch] text-black/70 leading-[1.8] mt-3">
-              Our Impact describes the research objectives, work packages, and validation metrics.
+              Our Impact describes the research objectives and validation metrics.
             </p>
             <a href="/#/our-impact" className="btn btnDark mt-3 inline-flex">
               Go to Our Impact →
