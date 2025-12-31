@@ -5,4 +5,5 @@ import react from "@vitejs/plugin-react";
 // - We use HashRouter so it works without server-side routing config.
 export default defineConfig({
   plugins: [react()],
+  base: "/instant-web/",
 });
