@@ -26,10 +26,10 @@ export function ContactPage() {
                 <div className="bg-bg p-6 rounded-xl mb-6">
                   <div className="text-sm font-extrabold text-black/70 mb-2">Email Address</div>
                   <a
-                    href="mailto:contact@instant-project.eu"
+                    href="mailto:c.luo@ieee.org"
                     className="text-2xl font-bold text-forest hover:text-accent transition underline"
                   >
-                    contact@instant-project.eu
+                    c.luo@ieee.org
                   </a>
                 </div>
 
