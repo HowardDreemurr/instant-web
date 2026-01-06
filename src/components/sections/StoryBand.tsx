@@ -29,7 +29,7 @@ export function StoryBand({
   return (
     <section
       id={id}
-      className="py-[88px] bg-cover bg-center"
+      className="py-[48px] bg-cover bg-center"
       style={{
         backgroundImage: fullImageUrl
           ? `linear-gradient(180deg, rgba(10,18,14,.78), rgba(10,18,14,.38)), url(${fullImageUrl})`

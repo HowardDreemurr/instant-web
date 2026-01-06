@@ -54,7 +54,7 @@ export function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 pb-7 bg-bg">
+      <section className="py-7 pb-7 bg-bg">
         <Container>
           <Reveal>
             <div className="flex flex-col gap-2 mb-4">

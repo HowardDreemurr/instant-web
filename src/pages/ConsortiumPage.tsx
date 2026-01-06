@@ -1,6 +1,7 @@
 import { Container } from "../components/ui/Container";
 import { Reveal } from "../components/ui/Reveal";
 import { StoryBand } from "../components/sections/StoryBand";
+import { Link } from "react-router-dom";
 
 function getLogoUrl(logo: string) {
   if (logo.startsWith("/")) {
@@ -138,6 +139,31 @@ export function ConsortiumPage() {
               </Reveal>
             ))}
           </div>
+        </Container>
+      </section>
+
+      <section className="py-16 bg-bg">
+        <Container>
+          <Reveal>
+            <div className="mb-10">
+              <div className="text-xs font-extrabold tracking-[.14em] uppercase text-black/70">Internal Portal</div>
+              <h2 className="font-serif text-[clamp(28px,2.8vw,44px)] tracking-[-0.01em] m-0 text-forest2 leading-[1.05] mt-2">
+                Internal Share-Point Entrance
+              </h2>
+              <Reveal>
+              <div className="flex gap-2 flex-wrap mt-5">
+                <a
+                  href="https://universityofexeteruk.sharepoint.com/:u:/r/sites/euinstant/SitePages/crisisCommunicationHome.aspx?csf=1&web=1&e=RSfIYn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btnPrimary bg-forest2"
+                >
+                  Portal
+                </a>
+              </div>
+              </Reveal>
+            </div>
+          </Reveal>
         </Container>
       </section>
     </>

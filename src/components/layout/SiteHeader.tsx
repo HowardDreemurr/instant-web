@@ -4,6 +4,7 @@ import { Container } from "../ui/Container";
 
 const nav = [
   { to: "/", label: "Home" },
+  { to: "/news", label: "News" },
   { to: "/our-work", label: "Our Work" },
   { to: "/our-impact", label: "Our Impact" },
   { to: "/consortium", label: "Consortium" },
