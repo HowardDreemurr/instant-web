@@ -48,13 +48,18 @@ export function SiteHeader() {
 
 
   return (
-    <header className="sticky top-0 z-30 bg-[#f7f7f7] border-b border-black/10">
-      <Container>
-        <div className="flex items-center justify-between gap-3 py-4">
-          <Link to="/" className="font-black tracking-[-0.03em] text-[22px] text-forest2 no-underline">
-            INSTANT
-          </Link>
+    <header className="h-16 sticky top-0 z-30 bg-[#f7f7f7] border-b border-black/10">
+      <Container className="h-full">
+        <div className="h-full flex items-center justify-between gap-3 py-4">
+          <div className="flex flex-row h-full gap-3">
+            <Link className="h-full" to="https://commission.europa.eu/" rel="noopener noreffer" target="_blank">
+              <img className="h-full w-auto" src="/images/logos/logo-ec--mute.svg" ></img>
+            </Link>
 
+            <Link to="/" className="font-black tracking-[-0.03em] text-[22px] text-forest2 no-underline">
+              INSTANT
+            </Link>
+          </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-2" aria-label="Primary">
             {nav.map((it) => (
