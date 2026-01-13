@@ -22,7 +22,9 @@
       "WebFetch(domain:www.oulu.fi)",
       "WebFetch(domain:en.cug.edu.cn)",
       "WebSearch",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(powershell -Command:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:/Users/HAOYA/instant-web/instant-web/extract_pptx.ps1\")"
     ]
   }
 }

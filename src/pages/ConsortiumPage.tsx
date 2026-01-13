@@ -91,7 +91,7 @@ export function ConsortiumPage() {
       <StoryBand
         kicker="Consortium"
         title="A Multidisciplinary Global Partnership"
-        imageUrl="/images/workpackages.svg"
+        className="bg-blue-950"
       >
         <p className="m-0">
           INSTANT is conducted by an international multidisciplinary and cross-sector consortium, including three European academic partners, three European industry partners, and three third country (TC) universities. The consortium is led by a team of world-leading academia and highly skilled industrial experts from multiple disciplines, including Computer Science, Communication Engineering, and Environmental Sciences.

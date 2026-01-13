@@ -83,31 +83,31 @@ export function OurWorkPage() {
       <StoryBand
         kicker="Our Work"
         title="Bridging sensing, communications and AI to overcome real‑world constraints"
-        imageUrl="/images/technology.svg"
+        className="bg-blue-950"
       >
         <p className="m-0">{INTRO}</p>
       </StoryBand>
 
       {/* Work Packages - Main Section */}
       <StoryBand kicker="Work Packages" title="WP1–WP6: Our Programme Structure" colorIndex={0}>
-        <p className="m-0 mb-6 text-white/80">
+        <p className="m-0 mb-6">
           INSTANT is organized into six integrated work packages, each targeting specific challenges in landslide monitoring and prediction.
         </p>
         <div className="grid grid-cols-12 gap-3">
           {WORK_PACKAGES.map((wp, idx) => (
             <Reveal key={wp.wp} delayMs={idx * 60} className="col-span-12 md:col-span-6">
-              <div className="border border-white/20 bg-white/10 rounded-2xl overflow-hidden h-full">
-                <div className="p-4 border-b border-white/15 bg-white/5">
-                  <div className="inline-flex px-3 py-1.5 rounded-full border border-white/25 bg-white/10 font-extrabold text-xs tracking-[.14em] uppercase text-white/90">
+              <div className="border border-black/10 bg-white rounded-2xl overflow-hidden h-full shadow-sm">
+                <div className="p-4 border-b border-black/10 bg-gray-50">
+                  <div className="inline-flex px-3 py-1.5 rounded-full border border-forest/25 bg-forest/10 font-extrabold text-xs tracking-[.14em] uppercase text-forest">
                     {wp.wp}
                   </div>
-                  <div className="mt-3 font-extrabold text-white/95 tracking-[-0.01em]">{wp.title}</div>
+                  <div className="mt-3 font-extrabold text-forest2 tracking-[-0.01em]">{wp.title}</div>
                 </div>
                 <div className="p-4">
-                  <div className="text-xs font-extrabold tracking-[.14em] uppercase text-white/90">Aim</div>
-                  <div className="mt-2 text-white/80 text-[13px] leading-[1.75] whitespace-pre-wrap">{wp.aim}</div>
-                  <div className="mt-4 text-xs font-extrabold tracking-[.14em] uppercase text-white/90">Novelty</div>
-                  <div className="mt-2 text-white/80 text-[13px] leading-[1.75] whitespace-pre-wrap">{wp.novelty}</div>
+                  <div className="text-xs font-extrabold tracking-[.14em] uppercase text-forest">Aim</div>
+                  <div className="mt-2 text-black/75 text-[13px] leading-[1.75] whitespace-pre-wrap">{wp.aim}</div>
+                  <div className="mt-4 text-xs font-extrabold tracking-[.14em] uppercase text-forest">Novelty</div>
+                  <div className="mt-2 text-black/75 text-[13px] leading-[1.75] whitespace-pre-wrap">{wp.novelty}</div>
                 </div>
               </div>
             </Reveal>
@@ -122,6 +122,7 @@ export function OurWorkPage() {
       >
         <p className="m-0">{EXISTING_TECH_INTRO}</p>
         <VerticalTabs
+          light
           tabs={[
             {
               title: "Geophysical & Geodetic",
@@ -145,6 +146,7 @@ export function OurWorkPage() {
         colorIndex={0}
       >
         <VerticalTabs
+          light
           tabs={[
             {
               title: "Challenge 1: Power Supply",
@@ -163,7 +165,7 @@ export function OurWorkPage() {
       </StoryBand>
 
       <StoryBand kicker="Bottlenecks" title="What we aim to overcome" colorIndex={1}>
-        <CardGrid items={BOTTLENECKS} />
+        <CardGrid items={BOTTLENECKS} light />
       </StoryBand>
 
       <section className="py-14 bg-bg">

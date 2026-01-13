@@ -44,7 +44,7 @@ export function OurImpactPage() {
       <StoryBand
         kicker="Our Impact"
         title="Research objectives and validation outcomes"
-        imageUrl="/images/objectives.svg"
+        className="bg-blue-950"
       >
         <p className="m-0">{INTRO}</p>
       </StoryBand>
@@ -52,9 +52,9 @@ export function OurImpactPage() {
       <StoryBand kicker="Innovations" title="Transformative outputs we target" colorIndex={0}>
         <div className="mt-4 flex flex-col gap-3">
           {INNOVATIONS.map((x) => (
-            <div key={x} className="flex gap-3 items-start border border-white/20 bg-white/10 rounded-2xl p-4">
-              <div className="w-2.5 h-2.5 rounded-full bg-white/80 mt-2" />
-              <div className="text-white/90 leading-[1.8] text-[14px]">{x}</div>
+            <div key={x} className="flex gap-3 items-start border border-black/10 bg-white rounded-2xl p-4 shadow-sm">
+              <div className="w-2.5 h-2.5 rounded-full bg-forest mt-2" />
+              <div className="text-black/80 leading-[1.8] text-[14px]">{x}</div>
             </div>
           ))}
         </div>
@@ -62,12 +62,13 @@ export function OurImpactPage() {
 
       <StoryBand kicker="Research objectives" title="Four Goals Driving Our Research" colorIndex={1}>
         <VerticalTabs
+          light
           tabs={RESEARCH_OBJECTIVES.map((ro) => ({
             title: ro.title,
             body: ro.body,
           }))}
         />
-        <div className="mt-8 rounded-2xl overflow-hidden border border-white/20">
+        <div className="mt-8 rounded-2xl overflow-hidden border border-black/10 shadow-sm">
           <img
             src={`${import.meta.env.BASE_URL}images/spec-img.png`}
             alt="INSTANT Research Objectives Overview"
@@ -77,7 +78,7 @@ export function OurImpactPage() {
       </StoryBand>
 
       <StoryBand kicker="How we measure" title="Key metrics & validation" colorIndex={0}>
-        <CardGrid items={MEASURES} />
+        <CardGrid items={MEASURES} light />
       </StoryBand>
 
       <StoryBand
@@ -89,18 +90,18 @@ export function OurImpactPage() {
           By developing innovative technologies for monitoring and predicting landslide disasters that have been increasingly amplified under climate changes and enabling effective knowledge sharing at a global scale, INSTANT will directly contribute to addressing critical challenges identified by:
         </p>
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="bg-white/60 p-5 rounded-lg border border-white/20">
-            <h3 className="font-bold mb-3 text-white">European Initiatives</h3>
-            <ul className="text-sm text-white/85 m-0 pl-5 space-y-2">
+          <div className="bg-white p-5 rounded-lg border border-black/10 shadow-sm">
+            <h3 className="font-bold mb-3 text-forest2">European Initiatives</h3>
+            <ul className="text-sm text-black/75 m-0 pl-5 space-y-2">
               <li>EIT Climate</li>
               <li>EIT Digital</li>
               <li>2030 Digital Compass</li>
               <li>EU Disaster Resilience Goals</li>
             </ul>
           </div>
-          <div className="bg-white/60 p-5 rounded-lg border border-white/20">
-            <h3 className="font-bold mb-3 text-white">United Nations SDGs</h3>
-            <ul className="text-sm text-white/85 m-0 pl-5 space-y-2">
+          <div className="bg-white p-5 rounded-lg border border-black/10 shadow-sm">
+            <h3 className="font-bold mb-3 text-forest2">United Nations SDGs</h3>
+            <ul className="text-sm text-black/75 m-0 pl-5 space-y-2">
               <li>SDG 9: Industry, Innovation and Infrastructure</li>
               <li>SDG 11: Sustainable Cities and Communities</li>
               <li>SDG 13: Climate Action</li>

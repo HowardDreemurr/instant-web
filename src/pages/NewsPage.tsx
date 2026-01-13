@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Reveal } from "../components/ui/Reveal";
 import { StoryBand } from "../components/sections/StoryBand";
 
@@ -12,7 +13,13 @@ type NewsItem = {
 const NEWS: NewsItem[] = [
   { date: "2025-08-06", title: "EC Signature Date", tag: "Time Point" },
   { date: "2026-01-01", title: "Project Start", tag: "Time Point" },
-  { date: "2026-01-12", title: "The First Annual Workshop", tag: "Workshop" },
+  {
+    date: "2026-01-12",
+    title: "The First Annual Workshop",
+    body: "INSTANT Workshop Newsletter - Programme Highlights (Talks)",
+    href: "/news/workshop-1-newsletter",
+    tag: "Workshop",
+  },
 ];
 
 function parseLocalISODate(iso: string) {
@@ -84,9 +91,9 @@ export function NewsPage() {
 
           <h3 className="mt-2 text-base font-semibold leading-6">
             {it.href ? (
-              <a className="underline underline-offset-4 hover:opacity-80" href={it.href}>
+              <Link className="underline underline-offset-4 hover:opacity-80" to={it.href}>
                 {it.title}
-              </a>
+              </Link>
             ) : (
               it.title
             )}
@@ -104,7 +111,7 @@ export function NewsPage() {
 
   return (
     <>
-      <StoryBand kicker="News" title="News & Event Timeline" imageUrl="/images/hero.svg">
+      <StoryBand kicker="News" title="News & Event Timeline" className="bg-blue-950">
         <p>Project updates, workshops, releases.</p>
       </StoryBand>
 

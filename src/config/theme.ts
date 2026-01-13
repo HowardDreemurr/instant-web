@@ -14,10 +14,11 @@ export const colors = {
 
   // Section backgrounds (for StoryBand without images)
   section: [
-    "#4e7a7e", // White
-    "#446b70", // Light gray
+    { bg: "#ffffff", isLight: true },  // White
+    { bg: "#f3f4f6", isLight: true },  // Light gray (gray-100)
   ],
 };
 
 // For backwards compatibility
-export const SECTION_COLORS = colors.section;
+export const SECTION_COLORS = colors.section.map((s) => s.bg);
+export const SECTION_IS_LIGHT = colors.section.map((s) => s.isLight);

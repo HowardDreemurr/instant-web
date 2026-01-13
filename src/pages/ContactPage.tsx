@@ -5,7 +5,7 @@ import { StoryBand } from "../components/sections/StoryBand";
 export function ContactPage() {
   return (
     <>
-      <StoryBand kicker="Contact" title="Get in Touch" imageUrl="/images/hero.svg">
+      <StoryBand kicker="Contact" title="Get in Touch" className="bg-blue-950">
         <p className="m-0">
           For inquiries about the INSTANT project, collaboration opportunities, or general information, please reach out to us via email.
         </p>

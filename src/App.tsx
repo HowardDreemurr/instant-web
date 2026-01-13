@@ -6,6 +6,7 @@ import { OurImpactPage } from "./pages/OurImpactPage";
 import { ConsortiumPage } from "./pages/ConsortiumPage";
 import { ContactPage } from "./pages/ContactPage";
 import { NewsPage } from "./pages/NewsPage";
+import { Newsletter1Page } from "./pages/Newsletter1Page";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/news/workshop-1-newsletter" element={<Newsletter1Page />} />
           <Route path="/our-work" element={<OurWorkPage />} />
           <Route path="/our-impact" element={<OurImpactPage />} />
           <Route path="/consortium" element={<ConsortiumPage />} />
