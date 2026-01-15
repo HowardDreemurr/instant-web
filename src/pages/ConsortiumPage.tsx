@@ -41,7 +41,7 @@ const PARTNERS = [
     country: "Romania",
     url: "https://geostud.ro",
     logo: "https://geostud.ro/wp-content/uploads/2025/01/geostudalb-min.avif",
-    description: "Real-world practical expertise in geophysical understanding.",
+    description: "Real-world practical expertise in geotechnical, geophysical engineering and environmental protection.",
   },
   {
     name: "Tree Technology",
