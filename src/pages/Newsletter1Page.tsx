@@ -111,6 +111,16 @@ export function Newsletter1Page() {
 
       <div className="bg-white py-12">
         <Container>
+          <Reveal>
+            <Link
+              to="/news"
+              className="inline-flex items-center gap-2 text-sm text-black/60 hover:text-forest mb-8 transition-colors"
+            >
+              <span aria-hidden="true">←</span>
+              <span>Back to News</span>
+            </Link>
+          </Reveal>
+
           {/* Summary Section */}
           <Reveal>
             <div className="mb-12 flex flex-col md:flex-row gap-8 items-start">

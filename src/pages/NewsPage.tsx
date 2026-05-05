@@ -20,6 +20,20 @@ const NEWS: NewsItem[] = [
     href: "/news/workshop-1-newsletter",
     tag: "Workshop",
   },
+  {
+    date: "2026-03-09",
+    title: "MSCA 30th Anniversary",
+    body: "Marie Skłodowska-Curie Actions celebrates 30 years — 150,000+ researchers and 23 Nobel Prize winners supported since 1996.",
+    href: "/news/msca-30th-anniversary",
+    tag: "Briefing",
+  },
+  {
+    date: "2026-03-26",
+    title: "Open Research Europe: A New Era Ahead",
+    body: "ORE marks its 5th anniversary and enters a new phase from autumn 2026 — CERN-hosted, expanded eligibility, free publishing for INSTANT.",
+    href: "/news/open-research-europe-2026",
+    tag: "Briefing",
+  },
 ];
 
 function parseLocalISODate(iso: string) {
